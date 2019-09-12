@@ -74,11 +74,16 @@ C:\Windows\System32\drivers>cdg win
 C:\Windows>
 ```
 
-> Note
+> <b>Note</b>
+>
 > If the directory path contains `space` `(` `)`, it must be added with double quote, and must delele the trailing `\`. This is because of the limitation of batch script language
+>
 > For example
+>
 > `cds C:\Program Files (x86)` will fail because double quote is not there
+>
 > `cds "C:\Program Files (x86)\"` will fail because trailing `\` is not removed
+>
 > `cds "C:\Program Files (x86)"` OK
 
 ## License
