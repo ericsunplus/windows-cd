@@ -26,6 +26,8 @@ Open a command window. `cds` can be used just like `cd`, but it maintains a dir 
 
 `cds -l` list entries in the history file with index
 
+`cds -g <regex>` list entries which match the regular expression
+
 `cds -s <n>` select the nth entry in the directory history
 
 `cds -c` clean the history file
@@ -49,12 +51,15 @@ D:\Temp>cds -l
 3 : c:\Windows\System32
 4 : c:\Windows\System32\drivers
 
+D:\Temp>cds -g sys
+3 : c:\Windows\System32
+4 : c:\Windows\System32\drivers
+
 D:\Temp>cds -s 2
 
 C:\Windows>cds -s 4
 
 C:\Windows\System32\drivers>cds -c
-
 
 C:\Windows\System32\drivers>cds -l
 
@@ -65,6 +70,7 @@ path                  path to to switch to
 optional arguments:
 -h, --help            show this help message and exit
 -l, --list            list directory stack
+-g GREP, --grep GREP  grep in directory history
 -s SELECT, --select SELECT
 select a dir in stack
 -c, --clean           clean directory stack database
