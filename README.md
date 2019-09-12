@@ -74,6 +74,12 @@ C:\Windows\System32\drivers>cdg win
 C:\Windows>
 ```
 
+To replace the default `cd`. Just use the alias with the following command
+
+```bat
+>doskey cd = cds $*
+```
+
 > <b>Note</b>
 >
 > If the directory path contains `space` `(` `)`, it must be added with double quote, and must delele the trailing `\`. This is because of the limitation of batch script language
