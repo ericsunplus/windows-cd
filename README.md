@@ -24,13 +24,15 @@ Copy `batchScript` and `pythonScript` to your Windows. In environment settings, 
 
 Open a command window. `cds` can be used just like `cd`, but it maintains a dir history file in <b>%userprofile%\dirstack.txt</b>.
 
-`cds -l` list entries in the history file with index
+`cds -l` list entries in the history file with index. This is also the default behaviour of cds if no argument is given
 
 `cds -g <regex>` list entries which match the regular expression
 
 `cds -s <n>` select the nth entry in the directory history
 
 `cds -c` clean the history file
+
+`cdg <regex>` go to a parent directory match the regex
 
 Please see the following example:
 
@@ -50,6 +52,14 @@ D:\Temp>cds -l
 2 : c:\Windows
 3 : c:\Windows\System32
 4 : c:\Windows\System32\drivers
+5 : D:\Temp
+
+D:\Temp>cds
+1 : c:\
+2 : c:\Windows
+3 : c:\Windows\System32
+4 : c:\Windows\System32\drivers
+5 : D:\Temp
 
 D:\Temp>cds -g sys
 3 : c:\Windows\System32
