@@ -71,6 +71,8 @@ def Main():
         selectDir(args.select)
     elif args.path:
         changdir(args.path)
+    else:
+        listDirStack()
 
 if __name__ == '__main__':
     Main()
